@@ -42,7 +42,7 @@ def plot_roc_curve(model, X_test, y_test):
     st.write('AUC(Area Under the Curve): {:.3f}'.format(roc_auc))
     # st.line_chart(pd.DataFrame({'fpr': fpr, 'tpr': tpr, 'x': np.linspace(0, 1, 10)}).set_index('fpr').style.set_caption('fpr vs tpr'))
     st.line_chart(pd.DataFrame({'fpr': fpr, 'tpr': tpr}).set_index('fpr'))
-
+    st.write('x-axis: fpr, y-axis: tpr')
 
 
 def plot_precision_recall_curve(model, X_test, y_test):
@@ -57,7 +57,7 @@ def plot_precision_recall_curve(model, X_test, y_test):
     st.line_chart(pd.DataFrame(
         {'precision': precision, 'recall': recall}).set_index('recall'))
     # st.columns
-    # st.write(thresholds)
+    st.write('x-axis: recall, y-axis: precision')
     # st.line_chart(pd.DataFrame({'precision': precision, 'recall': recall, 'x': np.linspace(0, 1, 10)}).set_index('recall').style.set_caption('recall vs precision'))
     
 
