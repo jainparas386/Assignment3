@@ -75,7 +75,7 @@ def run():
         'KNN': KNeighborsClassifier()
     }
     
-    datasets = ['Dataset 1', 'Dataset 2', 'Dataset 3', 'Dataset 3', 'Dataset 4']
+    datasets = ['Dataset 1', 'Dataset 2', 'Dataset 3', 'Dataset 4']
     
     st.sidebar.title('Classification Models')
     
