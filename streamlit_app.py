@@ -38,7 +38,7 @@ def plot_roc_curve(model, X_test, y_test):
     roc_auc = auc(fpr, tpr)
 
     st.write('### ROC Curve')
-    st.write('ROC(Receiver Operating Characteristics curve) is a graph of TPR vs FPR at different classification thresholds')
+    st.write('ROC(Receiver Operating Characteristics curve) is a graph of TPR(True Positive rate) vs FPR(False Positive Rate) at different classification thresholds')
     st.write('AUC: {:.3f}'.format(roc_auc))
     # st.line_chart(pd.DataFrame({'fpr': fpr, 'tpr': tpr, 'x': np.linspace(0, 1, 10)}).set_index('fpr').style.set_caption('fpr vs tpr'))
     st.line_chart(pd.DataFrame({'fpr': fpr, 'tpr': tpr}).set_index('fpr'))
