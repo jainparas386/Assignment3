@@ -39,7 +39,7 @@ def plot_roc_curve(model, X_test, y_test):
 
     st.write('### ROC Curve')
     st.write('ROC(Receiver Operating Characteristics curve) is a graph of TPR(True Positive rate) vs FPR(False Positive Rate) at different classification thresholds')
-    st.write('AUC: {:.3f}'.format(roc_auc))
+    st.write('AUC(Area Under the Curve): {:.3f}'.format(roc_auc))
     # st.line_chart(pd.DataFrame({'fpr': fpr, 'tpr': tpr, 'x': np.linspace(0, 1, 10)}).set_index('fpr').style.set_caption('fpr vs tpr'))
     st.line_chart(pd.DataFrame({'fpr': fpr, 'tpr': tpr}).set_index('fpr'))
 
@@ -127,7 +127,7 @@ def run():
     clf.fit(X_train, y_train)
 
     st.title('Classification Results')
-    st.write('### This app show the ROC curve and Precision-Recall for different dataset using different classification models')
+    st.write('### This app show the ROC curve and Precision-Recall curve for different classification datasets using different classification models')
 
     col1, col2 = st.columns([1, 1])
 
